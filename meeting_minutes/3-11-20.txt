@@ -1,0 +1,18 @@
+sentiment classifier and clustering algorithm to identify praise and criticism tweets
+	percent of praise cluster marked postiive by sentiment classifier?
+	percent marked negative?
+actionability model
+	length of post?
+	hand label classifier
+	doesn't have to be very scientific
+trends
+	of the praiseworthy tweets, how many mention credit cards? mortgages? accounts?
+how should we visualize this information?
+
+possible approach:
+  sentiment classifier to divide tweets into positive and negative
+  cluster positive tweets, cluster negative tweets
+  filter words in each cluster
+	 valid english words with at least a certain association with credit union related words (credit, mortgage, etc)
+	  filter out positive/negative words
+    

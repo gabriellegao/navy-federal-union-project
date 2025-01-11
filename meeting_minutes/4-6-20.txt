@@ -1,0 +1,21 @@
+Pam - essentially equivalent of CMO
+
+Presentation:
+Introduction - Overview of the Project (What's the data what specific issue you are tackling, etc.)
+A quick summary with key findings and recommendations
+Analysis - (i.e., what you did, your tools, trends in the social media)
+Conclusion - Potential next steps, or ways to improve. What should Navy Federal be focused on? 
+
+Keep it high level - don't be super technical
+Recommendations?
+
+NPS score - follower score
+  how many have zero followers?
+  what are results like for people with specific ranges of followers?
+  histogram of follower counts
+    -all posts?
+    -positive posts?
+    -negative posts?
+    -posts on specific topics?
+
+GoArmy vs GoNavy

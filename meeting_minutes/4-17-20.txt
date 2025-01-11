@@ -1,0 +1,6 @@
+Presentation Notes
+--------------------
+
+We didn't record all of the participants of the call, but we had a meeting with several upper level employees at Navy Federal, including Senior VP Pam Piligian and our point of contact Ryan Krog as well as several others. We presented on our approach and findings so far, emphasizing our focus on actionability.
+
+We got lots of positive feedback as well as negative. We emphasized the idea of actionability as a method of cutting through all the useless data and prioritizing the allocation of resources, and some employees loved this; however, others mentioned that NFCU employees looked through every social media post regardless and that we wouldn't be helping them allocate resources effectively. Those employees pushed for more of a focus on overall high-level trend analysis rather than low-level actionability. There was a bit of back and forth between the two groups. We plan to accomodate both by integrating elements of both a small picture and a big picture analysis by providing the ability to classify individual posts in terms of priority as well as analyzing the overall trends of certain topics.

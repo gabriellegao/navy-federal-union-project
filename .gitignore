@@ -1,0 +1,20 @@
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+*.csv
+*.xlsx
+/code/gabrielle/w2v_model_pos.model
+/code/Extra/w2v_model.model
+/code/Main/txtblob_lda_w2v_actionability.ipynb
+/code/gabrielle/.ipynb_checkpoints/txtblob_Ida_w2v_neg-checkpoint.ipynb
+/code/gabrielle/Gabrielle.ipynb
+*.model
+/code/gabrielle/w2v_model.model
+code/gabrielle/txtblob_lda_w2v_pos.ipynb
+code/gabrielle/txtblob_lda_w2v_neu.ipynb

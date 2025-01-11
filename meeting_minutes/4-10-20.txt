@@ -1,0 +1,95 @@
+New approach:
+1. Load NFCU social media posts: dataset
+2. Label each post in dataset as positive, negative, neutral
+	-Use the following tools:
+		-IBM Watson
+		-TextBlob
+		-Airline Classifier
+	-Creates column label in dataset with label=1 as positive, 0 as neutral, -1 as negative
+	-Creates variables positive_dataset, negative_dataset, neutral_dataset
+2. Topic Mining (LDA)
+	-on whole dataset, positive_dataset, negative_dataset, neutral_dataset
+	-Create variables dataset_topics, positive_topics, negative_topics, neutral_topics
+3. Topic Mining Within Clusters
+	-Use K-Means to generate clusters for the whole dataset, positive_dataset, negative_dataset, neutral_dataset
+		-Create variables dataset_clusters, positive_clusters, negative_clusters, neutral_clusters
+	-Perform LDA on each cluster
+		-Create variables dataset_cluster_topics, positive_cluster_topics, negative_cluster_topics, neutral_cluster_topics
+	-Create variable useful_topics
+		-From  dataset_topics, positive_topics, negative_topics, neutral_topics,
+		       dataset_cluster_topics, positive_cluster_topics, negative_cluster_topics, neutral_cluster_topics
+	-Name each useful topic and create variable useful_topic_names
+4. Topic Classifiers
+	-Train topic classifiers to determine whether a post is related to each of the topics in useful_topics
+5. Actionability Filter
+	-Label posts as actionable if it relates to any relevant topic (if any Topic Classifier returns 1)
+6. Sentiment Classifier
+	-Use actionability filter to label posts as actionable or non-actionable
+	-Select a sample of actionable posts for which the polarity distribution is representative of the whole dataset
+	-Manually label the sample of actionable posts as positive, negative or neutral
+	-All non-actionable posts should automatically be labeled neutral
+	-Train a classifier on the manually labeled sample
+	-Use the classifier to label the rest of the dataset as positive, negative, neutral
+	-Perform 2, 3, 4, 5 again with the newly labeled dataset to improve results of topic mining, topic classifiers, and actionability filter
+7. Result: a sentiment classifier that will only extract posts that are relevant to NFCU's brand image in either a positive or a negative way
+	-Improved sentiment classifier can now be used to extract more specific topics that are relevant to NFCU
+
+New approach:
+1. Label each post in dataset as positive, negative, neutral
+	-Use the following tools: IBM Watson, TextBlob, Airline Classifier
+2. Topic Mining (LDA)
+	-Run on whole dataset as well as the subsets of positive posts, negative posts and neutral posts
+3. Topic Mining Within Clusters
+	-Use K-Means to generate clusters of posts within whole dataset as well as clusters of posts within positive posts, negative posts and neutral posts
+4. List useful topics produced by 2 & 3 and name them
+5. Topic Classifiers
+	-Train topic classifiers to determine whether a post is related to each of the topics in 4
+5. Actionability Filter
+	-Label posts as actionable if it relates to any relevant topic (if any Topic Classifier returns 1)
+6. Sentiment Classifier
+	-Use actionability filter to label posts as actionable or non-actionable
+	-Select a sample of actionable posts for which the polarity distribution is representative of the whole dataset
+	-Manually label the sample of actionable posts as positive, negative or neutral
+	-All non-actionable posts should automatically be labeled neutral
+	-Train a classifier on the manually labeled sample
+	-Use the classifier to label the rest of the dataset as positive, negative, neutral
+	-Perform 2, 3, 4, 5 again with the newly labeled dataset to improve results of topic mining, topic classifiers, and actionability filter
+7. Result: a sentiment classifier that will only extract posts that are relevant to NFCU's brand image in either a positive or a negative way
+	-Improved sentiment classifier can now be used to extract more specific topics that are relevant to NFCU
+
+-Initial approach:
+	-Topic Mining (LDA or LSA) -> Topics
+	-Topics -> Topic Classifier
+		-Name the topics we think will be useful
+		-Manually label a chunk of the data by the useful topics to train a supervised topic classifier
+	-Supervised Sentiment Classifier
+		-Manually label a chunk of the data as positive, negative, neutral
+	-Topic Classifier + Supervised Sentiment Classifier -> Topic-Based Sentiment Classifier
+
+-Second approach:
+	-Supervised Sentiment Classifier
+		-Manually label a chunk of the data as positive, negative, neutral
+	-Perform Topic Mining (LDA) -> Topics
+		-on all data, positive, negative, neutral
+		-on all data, positive, negative, neutral after K-means clustering
+		-take only the useful looking topics extracted by these methods
+	-Topics -> Topic Classifier
+		-Manually label a chunk of the data by the useful topics to train a supervised topic classifier
+	-Topic Classifier + Supervised Sentiment Classifier -> Topic-Based Sentiment Classifier
+
+Topic Mining Topic Classifiers => Aspect Based Sentiment
+	-LDA -> Topics -> Topic Classifiers + Sentiment Analysis -> Topic Based Sentiment
+-LDA wasn't working so well, so moved to approach:
+	-Sentiment Analysis -> LDA within positive and negative groups -> Topics -> Topic Classifiers -> Topic Based Sentiment
+-New approach?
+	-Topic Classifiers as Actionability Filter -> Sentiment Analysis on Actionable Posts -> LDA within positive and negative actionable posts -> Update Topic Classifiers and repeat
+	-Allows for trend tracking of topics over time via the topic classifiers
+	-Allows for tracking sentiment over time, both overall and by topic
+
+
+Presentation:
+-Slide: What's your system like? Flow chart
+-Slide: descriptive stats
+	-volume of posts over time
+	-nps scores histogram
+	-

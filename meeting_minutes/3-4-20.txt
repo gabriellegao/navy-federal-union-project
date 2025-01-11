@@ -1,0 +1,10 @@
+credit scores vs credit confusion - strategic initiative to improve credit
+	increased discussion about credit score due to this
+topic mining
+	adjust stop words - navy federal?
+	focus only on lengthy posts - filter data before running topic mining
+	potential topics - debit cards, credit cards, savings accounts, checking accounts, mortages, application processes
+	build own dictionary(?)
+
+model to score usefulness of a post - logistic regression?
+weekly meeting wednesday 10:30am

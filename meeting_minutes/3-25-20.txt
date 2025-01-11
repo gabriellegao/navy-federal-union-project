@@ -1,0 +1,23 @@
+Sentiment Analysis
+  -Datasets:
+    -Airline dataset
+    -Sentiment140 dataset
+    -Amazon reviews
+    -IMDB movie review dataset (~50000?)
+  -Possible approach:
+    -Start with Naive Bayes classifier to classify positive/negative
+    -Use a different classifier to rank polarity (how strongly negative)
+	-Probably based on amazon reviews that can estimate how strong an opinion is
+
+Actionability
+  -Mention of student loans, military, veterans, active duty, army, marines, navy, personal loans, checkings account, savings accounts
+  -Negative sentiment (respond to 
+  -Tweet length (sufficiently long?)
+
+Topic Mining
+  -credit cards
+  -mortgages
+  -accounts?
+  -loans?
+  -
+
